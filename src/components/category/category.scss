@@ -1,0 +1,28 @@
+.category {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  .category__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    .category__item {
+      display: flex;
+      flex-direction: column;
+      margin-right: 30px;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+      background-color: #22a6b3;
+      border-radius: 50%;
+      color: #fff;
+      cursor: pointer;
+      span {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
