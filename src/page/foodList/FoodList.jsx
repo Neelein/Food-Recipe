@@ -27,7 +27,7 @@ const FoodList = () => {
     return (
         <div className='foodList'>
             {cuisine.map((c)=>(
-                <FoodCard food={c}/>
+                <FoodCard food={c} key={c.id}/>
             ))}
         </div>
     )

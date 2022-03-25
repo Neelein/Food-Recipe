@@ -23,7 +23,7 @@ const Search = () => {
   return (
     <div className='search'>
         {result.map((food)=>(
-            <FoodCard food={food}/>
+            <FoodCard food={food} key={food.id}/>
         ))}
     </div>
   )

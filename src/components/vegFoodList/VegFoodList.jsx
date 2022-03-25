@@ -23,6 +23,7 @@ const VegFoodList = () => {
         const data=await res.json()
         setFetchFood(data.recipes)
         localStorage.setItem('vegetarian',JSON.stringify(data.recipes))
+        
     }
   return (
     <div className='vegFoodList'>
