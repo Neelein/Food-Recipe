@@ -1,10 +1,10 @@
 import  Home  from './page/Home/Home';
 import {Route,Routes} from 'react-router-dom'
-import Navbar from './components/navbar/Navbar';
-import Category from './components/category/Category';
-import FoodList from './page/foodList/FoodList';
-import SingleFood from './page/singleFood/SingleFood'
-import Search from './page/search/Search'
+import Navbar from './components/Navbar/Navbar';
+import Category from './components/Category/Category';
+import FoodList from './page/FoodList/FoodList';
+import SingleFood from './page/SingleFood/SingleFood'
+import Search from './page/Search/Search'
 
 function App() {
   return (

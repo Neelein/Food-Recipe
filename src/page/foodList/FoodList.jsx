@@ -2,7 +2,7 @@ import React from 'react'
 import './foodList.scss'
 import {useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom'
-import FoodCard from '../../components/foodCard/FoodCard'
+import FoodCard from '../../components/FoodCard/FoodCard'
 
 const FoodList = () => {
 
@@ -13,7 +13,6 @@ const FoodList = () => {
 
     useEffect(()=>{
         fetchcuisine()
-        
     },[cate])
 
     const fetchcuisine=async()=>{
@@ -21,9 +20,7 @@ const FoodList = () => {
         const data=await res.json()
         setCuisine(data.results)
     }
-    console.log(cuisine)
-    
-    
+
     return (
         <div className='foodList'>
             {cuisine.map((c)=>(

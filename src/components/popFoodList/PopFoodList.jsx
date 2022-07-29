@@ -1,5 +1,5 @@
 import React from 'react'
-import FoodCard from '../foodCard/FoodCard'
+import FoodCard from '../FoodCard/FoodCard'
 import './popFoodList.scss'
 import { useEffect,useState} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,7 +10,9 @@ import "swiper/css/navigation";
 
 const PopFoodList = () => {
     const [fetchFood,setFetchFood]=useState([])
+
     let check=JSON.parse(localStorage.getItem('popular'))
+
     useEffect(()=>{
         if(check){
             setFetchFood(check)
@@ -18,18 +20,20 @@ const PopFoodList = () => {
             fetchData()
         }
     },[])
+
     const fetchData=async()=>{
         const res = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=12`)
         const data=await res.json()
         setFetchFood(data.recipes)
         localStorage.setItem('popular',JSON.stringify(data.recipes))
     }
+
   return (
     <div className='popFoodList'>
         <div className="popFooList__title">
             <h1>Popular Meals</h1>
         </div>
-        <Swiper 
+        <Swiper
             slidesPerView={4}
             spaceBetween={30}
             slidesPerGroup={4}

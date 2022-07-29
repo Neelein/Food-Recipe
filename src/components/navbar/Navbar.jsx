@@ -9,13 +9,13 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
 
   let navigate=useNavigate()
-  
+
   const [input,setInput]=useState('')
+
   const handleSubmit=(e)=>{
     e.preventDefault()
     navigate('/search/'+input)
   }
-
 
   return (
     <div className='navbar'>

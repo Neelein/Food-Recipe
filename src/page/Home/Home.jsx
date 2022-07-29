@@ -1,7 +1,7 @@
 import React from 'react'
 import './home.scss'
-import PopFoodList from '../../components/popFoodList/PopFoodList'
-import VegFoodList from '../../components/vegFoodList/VegFoodList'
+import PopFoodList from '../../components/PopFoodList/PopFoodList'
+import VegFoodList from '../../components/VegFoodList/VegFoodList'
 
 const Home = () => {
   return (
